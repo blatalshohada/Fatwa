@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+<record id="short1" model="shortcut.page">
+            <field name="name">الحمد لله </field>
+        </record>
+        <record id="short2" model="shortcut.page">
+            <field name="name">اما بعد</field>
+        </record>
+        <record id="short3" model="shortcut.page">
+            <field name="name">هذا وبالله التوفيق</field>
+        </record>
+
+
+        <record id="chqannel1" model="question.channel">
+            <field name="name">المكتب</field>
+        </record>
+        <record id="chqannel2" model="question.channel">
+            <field name="name">بريد</field>
+        </record>
+
+<!--        data -->
+
+         <record id="department_data" model="fatwa.department">
+            <field name="name">عبادات</field>
+        </record>
+          <record id="fatwa_source_data" model="fatwa.source">
+            <field name="name">عبر النظام</field>
+        </record>
+        <record id="ticker_type_data" model="helpdesk.ticket.type">
+            <field name="name">استفتاء </field>
+        </record>
+         <record id="quest_channel" model="question.channel">
+            <field name="name">واتساب</field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>

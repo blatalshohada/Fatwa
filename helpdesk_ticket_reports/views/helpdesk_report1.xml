@@ -1,0 +1,236 @@
+<odoo>
+    <data>
+        <report id="print_report_pdf_helpdesk_report1"
+                model="helpdesk.ticket"
+                string=" تقرير عدد الاسئلة الواردة للنظام"
+                report_type="qweb-pdf"
+                menu="False"
+                name="helpdesk_ticket_reports.print_report_pdf_helpdesk1"
+
+        />
+        <template id="print_report_pdf_helpdesk1_document">
+
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context({'lang':'en_US'})"/>
+
+                <div class="page" dir="rtl">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div style="text-align: center; font-size:24px; color:#000000">
+
+                        <strong style="font-weight: normal;">
+                            عدد الاسئلة الواردة للنظام
+                        </strong>
+
+                    </div>
+                    <br/>
+                    <table border="0" align="right" style="width:100%;">
+
+
+                        <tr>
+
+
+
+
+
+                            <th>
+
+
+                                <td>
+                                    <strong style="font-size:14px;font-weight:bolder">
+
+                                        <span style="font-size:14px;">/ تاريح البداية</span>
+                                    </strong>
+
+                                </td>
+                                 <td style="font-size:14px;">
+                                    <p t-esc="date_from"/>
+                                </td>
+                            </th>
+                             <th>
+
+                                <td>
+                                    <strong style="font-size:14px;font-weight:bolder">
+
+                                        <strong style="font-size:14px;">/ تاريخ النهاية</strong>
+                                    </strong>
+
+                                </td>
+                                <td>
+                                    <p t-esc="date_to"/>
+                                </td>
+
+
+                            </th>
+
+  <th>
+
+
+                                <td>
+                                    <strong style="font-size:14px;font-weight:bolder">/ نوع السؤال
+                                    </strong>
+
+                                </td>
+                                <td>
+                                    <p t-esc="question_type_id[1]"/>
+                                </td>
+
+
+                            </th>
+
+                        </tr>
+
+<!--                        <tr>-->
+
+
+
+<!--                            <th>-->
+
+
+<!--                                <td >-->
+<!--                                    <strong style="font-size:14px;font-weight:bolder">-->
+
+<!--                                        <span style="font-size:14px;">/ مسند الى</span>-->
+<!--                                    </strong>-->
+
+<!--                                </td>-->
+<!--                                 <td>-->
+<!--                                    <p t-esc="_get_assign_to_id"/>-->
+<!--                                </td>-->
+
+<!--                            </th>-->
+
+
+<!--                            <th>-->
+
+<!--                                <td>-->
+<!--                                    <strong style="font-size:14px;font-weight:bolder">-->
+
+<!--                                        <span style="font-size:14px;">/ حالة السوال</span>-->
+<!--                                    </strong>-->
+
+<!--                                </td>-->
+<!--                                 <td style="font-size:14px;">-->
+<!--                                    <p t-esc="_get_question_status_id"/>-->
+<!--                                </td>-->
+
+<!--                            </th>-->
+<!--                             <th>-->
+
+
+<!--                                <td>-->
+<!--                                    <strong style="font-size:15px;font-weight:bolder">/ الاولوية-->
+<!--                                    </strong>-->
+
+<!--                                </td>-->
+<!--                                  <td >-->
+<!--                                    <p t-esc="_get_priority_id"/>-->
+<!--                                </td>-->
+
+<!--                            </th>-->
+
+<!--                        </tr>-->
+
+
+                    </table>
+
+
+                    <table class="gridtable"
+                           style="	font-family: verdana,arial,sans-serif;font-size:14px;color:#000000;border-width: 1px;border-color: #000000;border-collapse: collapse;"
+                           width="100%">
+                        <thead style="	font-family: verdana,arial,sans-serif;font-size:14px;color:#000000;border-width: 1px;border-color: #000000;border-collapse: collapse;"
+                        >
+                            <tr>
+
+                                <th style="width:100px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                    الاسم
+                                </th>
+                                <th style="width:100px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                    التاريخ
+                                </th>
+                                <th style="width:150px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                   مسند الى
+                                </th>
+                                <th style="width:150px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                  نوع السوال
+                                </th>
+
+                                <th style="width:200px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                   خالة السؤال
+                                </th>
+                                <th style="width:100px;border-width: 1px;padding: 10px;border-style: solid;border-color: #000000;text-align: center;">
+                                    الاولوية
+                                </th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <t t-set="i" t-value="1"/>
+                            <t t-set="total" t-value="0"/>
+
+
+                            <t t-foreach="_get_helpdesk_report" t-as="line">
+                                <tr>
+
+
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['subject']"/>
+                                    </td>
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['date']"/>
+                                    </td>
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['user_id']"/>
+                                    </td>
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['question_type_id']"/>
+                                    </td>
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['question_status_id']"/>
+                                    </td>
+                                    <td style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;background-color: #ffffff;">
+                                        <span t-esc="line['priority']"/>
+                                    </td>
+
+
+                                    <t t-set="i" t-value="i+1"/>
+                                    <t t-set="total" t-value="total+1"/>
+
+
+                                </tr>
+                            </t>
+                        </tbody>
+                        <tr>
+                            <td colspan="5"
+                                style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;">
+                                <sapan t-esc="total" style="font-weight: normal;"/>
+                            </td>
+                            <td colspan="1"
+                                style="border-width: 1px;padding: 10px;text-align: center;border-style: solid;border-color: #000000;">
+                                <strong>الاجمالى</strong>
+
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+            </t>
+        </template>
+
+        <template id="print_report_pdf_helpdesk1">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="helpdesk_ticket_reports.print_report_pdf_helpdesk1_document"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

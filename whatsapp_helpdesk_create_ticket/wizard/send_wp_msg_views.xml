@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="send_whatsapp_msg_view_form" model="ir.ui.view">
+        <field name="name">whatsapp.msg.form</field>
+        <field name="model">whatsapp.msg</field>
+        <field name="arch" type="xml">
+            <form string="Send a WhatsApp Message">
+                <sheet>
+                    <group>
+                        <field name="partner_id" placeholder="Add contacts" domain="[('mobile','!=',False),('country_id','!=',None)]"/>
+                        <field name="message" style="height='400px';"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <group>
+                        <span>
+                            <button string="Send" type="object" class="oe_highlight" name="action_send_msg"/>
+                            <button string="Cancel" class="oe_link" special="cancel" />
+                        </span>
+                    </group>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="send_whatsapp_msg_form_action" model="ir.actions.act_window">
+        <field name="name">Send WhatsApp Message</field>
+        <field name="res_model">whatsapp.msg</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'search_default_team_id':[active_model],
+            'search_default_team_id': [active_id]
+            }</field>
+    </record>
+
+    <record id="send_whatsapp_msg_action" model="ir.actions.act_window">
+        <field name="name">Send Message via WhatsApp</field>
+        <field name="res_model">whatsapp.msg</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'force_mobile':True, 'force_country':True}</field>
+    </record>
+
+</odoo>

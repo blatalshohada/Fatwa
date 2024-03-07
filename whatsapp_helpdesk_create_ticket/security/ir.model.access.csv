@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_whatsapp_messages,whatsapp.messages,model_whatsapp_messages,,1,1,1,1
+access_whatsapp_templates,whatsapp.templates,model_whatsapp_templates,,1,1,1,1
+

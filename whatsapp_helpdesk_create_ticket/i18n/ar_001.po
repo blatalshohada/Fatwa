@@ -1,0 +1,598 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_helpdesk_create_ticket
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-04 20:19+0000\n"
+"PO-Revision-Date: 2023-09-04 20:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Verify meta webhook</span>"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">WhatsApp meta api token</span>"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">WhatsApp meta phone number</span>"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">WhatsApp webhook callback Url</span>"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">WhatsApp webhook token</span>"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_view_form
+msgid "Add contacts"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.actions.act_window,help:whatsapp_helpdesk_create_ticket.action_whatsapp_templates
+msgid "Click to create a new group template."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model,name:whatsapp_helpdesk_create_ticket.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid ""
+"Copy this and paste it in meta webhook callback url,Make sure the URL is "
+"HTTPS."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__create_uid
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__create_uid
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__create_date
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__create_date
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__time
+msgid "Date and time"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__display_name
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__display_name
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "Get Url"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__helpdesk_id
+msgid "Help Desk"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model,name:whatsapp_helpdesk_create_ticket.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "تذكرة مكتب المساعدة"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__id
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__id
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__id
+msgid "ID"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_needaction
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_error
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__senderName
+msgid ""
+"If message is coming then it contains name sender else if message is sending"
+" from odoo then name/mobile of sender which has current instance attached"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__message_body
+msgid ""
+"If whatsapp message have caption (for image,video,document) else add message"
+" body"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__state
+msgid "It is based on message is sent or receive"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages____last_update
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg____last_update
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__write_uid
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__write_uid
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__write_date
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__write_date
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__message_body
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message
+msgid "Message"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__message_content
+msgid "Message Content"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__message_id
+msgid "Message Id"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_res_config_settings__whatsapp_meta_webhook_token
+msgid "Meta Webhook Verify Token"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__name
+msgid "Name"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_templates__name__new_ticket
+msgid "New Ticket"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#: code:addons/whatsapp_helpdesk_create_ticket/wizard/send_msg.py:0
+#, python-format
+msgid "Please choose a customer first"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/wizard/send_msg.py:0
+#, python-format
+msgid "Please enter %s mobile number and select country"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid "Please enter Customer mobile number"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_res_config_settings__whatsapp_meta_webhook_callback_url
+msgid ""
+"Please update the Meta Api account webhook configuration with this "
+"information."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_messages__state__received
+msgid "Received"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__partner_id
+msgid "Recipients"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_view_form
+msgid "Send"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.actions.act_window,name:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_action
+msgid "Send Message via WhatsApp"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.actions.act_window,name:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_form_action
+#: model:ir.model,name:whatsapp_helpdesk_create_ticket.model_whatsapp_msg
+msgid "Send WhatsApp Message"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.helpdesk_ticket_view_form_inherited
+msgid "Send Whatsapp message"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.send_whatsapp_msg_view_form
+msgid "Send a WhatsApp Message"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__senderName
+msgid "Sender Name"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_messages__state__sent
+msgid "Sent"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.actions.act_window,name:whatsapp_helpdesk_create_ticket.action_general_configuration
+msgid "Settings"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid "Solved"
+msgstr "تم حلّها"
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__state
+msgid "State"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_templates__name
+msgid "Template Name"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_templates__name__ticket_in_cancelled
+msgid "Ticket In Cancelled"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_templates__name__ticket_in_progress
+msgid "Ticket In Progress"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields.selection,name:whatsapp_helpdesk_create_ticket.selection__whatsapp_templates__name__ticket_in_solved
+msgid "Ticket In Solved"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__time
+msgid "Time on which message is sent or receive"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__to
+msgid "To"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "Used to indicate that the webhook route is for verification purposes."
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_msg__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "WhatsApp"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"WhatsApp template not found.Please create the 'New Ticket' WhatsApp "
+"templates"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"WhatsApp template not found.Please create the 'Ticket Cancelled' WhatsApp "
+"template"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"WhatsApp template not found.Please create the 'Ticket In Progress' WhatsApp "
+"template"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: code:addons/whatsapp_helpdesk_create_ticket/models/helpdesk_ticket.py:0
+#, python-format
+msgid ""
+"WhatsApp template not found.Please create the 'Ticket In Solved' WhatsApp "
+"template"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__message_id
+msgid "Whatsapp Message id"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model,name:whatsapp_helpdesk_create_ticket.model_whatsapp_messages
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_helpdesk_ticket__whatsapp_message_ids
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.helpdesk_ticket_view_form_inherited
+msgid "Whatsapp Messages"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.res_config_settings_view_form
+msgid "Whatsapp Meta Integration"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__whatsapp_message_provider
+msgid "Whatsapp Service Provider"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model,name:whatsapp_helpdesk_create_ticket.model_whatsapp_templates
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.view_whatsapp_templates_form
+msgid "Whatsapp Template"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.actions.act_window,name:whatsapp_helpdesk_create_ticket.action_whatsapp_templates
+#: model:ir.ui.menu,name:whatsapp_helpdesk_create_ticket.menu_whatsapp_templates
+#: model_terms:ir.ui.view,arch_db:whatsapp_helpdesk_create_ticket.view_whatsapp_templates_tree
+msgid "Whatsapp Templates"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__name
+msgid "Whatsapp message"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_res_config_settings__whatsapp_meta_phone_number_id
+msgid "Whatsapp meta Phone Number Id"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_res_config_settings__whatsapp_meta_api_token
+msgid "Whatsapp meta Token"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,help:whatsapp_helpdesk_create_ticket.field_whatsapp_messages__whatsapp_message_provider
+msgid "Whatsapp provider on which message is sent or received"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_res_config_settings__module_whatsapp_meta_webhook_verify
+msgid "verify webhook"
+msgstr ""
+
+#. module: whatsapp_helpdesk_create_ticket
+#: model:ir.model.fields,field_description:whatsapp_helpdesk_create_ticket.field_res_config_settings__whatsapp_meta_webhook_callback_url
+msgid "webhook's callback URL"
+msgstr ""

@@ -1,0 +1,214 @@
+<odoo>
+  <record id="helpdesk_ticket_seq" model="ir.sequence">
+        <field name="name">helpdesk.ticket</field>
+        <field name="code">helpdesk.ticket</field>
+        <field name="padding">5</field>
+        <field eval="False" name="company_id"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+  <record id="helpdesk_ticket_inherit" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+    <field name="arch" type="xml">
+         <xpath expr="//div[@class='oe_title']" position="inside">
+             <h1><field name="seq" /></h1>
+
+      </xpath>
+
+
+           <xpath expr="//div[@class='oe_title']" position="after">
+               <h3 colspan="2">السؤال بعد التنقيح</h3>
+
+                 <field name="fatwa_question" string="Description" widget="html" colspan="2" options="{'style-inline': true}" nolabel="1" />
+
+               <h3 colspan="2">الرد على الفتوى</h3>
+          <field name="fatwa_replay" placeholder=""  widget="html" colspan="2" options="{'style-inline': true}" nolabel="1" groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa"/>
+               <field name="fatwa_new_replay" placeholder="مختصر جواب الفتوى"   groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa"/>
+
+           </xpath>
+
+
+          <xpath expr="//field[@name='description']" position="attributes">
+                    <attribute name="widget">html</attribute>
+         <attribute name="invisible">1</attribute>
+
+                </xpath>
+                  <xpath expr="//div[@class='oe_title']" position="after">
+                        <h3 colspan="2">السؤال الاصلى</h3>
+                <field name="description" widget="html" olspan="2" options="{'style-inline': true}" nolabel="1"/>
+                  </xpath>
+
+
+        <xpath expr="//field[@name='tag_ids']" position="after">
+             <field name="sender_id" />
+
+
+             <field name="send" groups="fatwa.group_restrict_manage_fatwa"  invisible="1"/>
+              <field name="fatwa_saves" groups="fatwa.group_restrict_manage_fatwa"/>
+              <field name="refuse" groups="fatwa.group_restrict_manage_fatwa"/>
+
+            <field name="save_order" groups="fatwa.group_restrict_manage_operation"/>
+               <field name="for_study" groups="fatwa.group_restrict_manage_fatwa"/>
+              <field name="choices_fatwa" groups="fatwa.group_restrict_manage_fatwa"/>
+             <field name="archive" groups="fatwa.group_restrict_manage_fatwa" widget="radio" nolabel="1" options="{'horizontal': true}"/>
+             <field name="publish" groups="fatwa.group_restrict_manage_fatwa" widget="radio" nolabel="1" options="{'horizontal': true}"/>
+             <field name="send_or_not" groups="fatwa.group_restrict_manage_fatwa" widget="radio" nolabel="1" options="{'horizontal': true}"/>
+
+
+
+        </xpath>
+         <xpath expr="//field[@name='partner_id']" position="after">
+                    <field  name="fatwa_date" />
+             <field  name="fatwa_question_channel_id" />
+             <field  name="fatwa_new_source_id"/>
+                    <field  name="write_uid"/>
+                          <field name="shot_name_id" groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa"/>
+              <button name="button_up" string="الى الاعلى" type="object"  class="oe_highlight"  groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa" />
+                    <button name="button_down" string="الى الاسفل" type="object" class="oe_highlight"  groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa" />
+
+
+                </xpath>
+
+
+
+          <xpath expr="//field[@name='tag_ids']" position="attributes">
+            <attribute name="string">الكلمات المفتاحية(يفضل استخدام الجذور فى الكلمات المفتاحية)</attribute>
+  <attribute name="groups">fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa</attribute>
+          </xpath>
+         <xpath expr="//field[@name='email_cc']" position="attributes">
+            <attribute name="invisible">1</attribute>
+        </xpath>
+
+          <xpath expr="//field[@name='team_id']" position="attributes">
+  <attribute name="groups">fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa</attribute>
+        </xpath>
+         <xpath expr="//field[@name='ticket_type_id']" position="attributes">
+  <attribute name="groups">fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa</attribute>
+                </xpath>
+
+
+      
+    </field>
+  </record>
+
+     <record id="helpdesk_ticket_tree_inherit" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+    <field name="arch" type="xml">
+         <xpath expr="//field[@name='display_name']" position="after">
+             <field name="name"/>
+        <field name="seq" />
+      </xpath>
+
+        <xpath expr="//tree" position="attributes">
+            <attribute name="default_order">write_date desc</attribute>
+               <attribute name="default_order">priority desc</attribute>
+        </xpath>
+
+         <xpath expr="//field[@name='display_name']" position="attributes">
+            <attribute name="invisible">1</attribute>
+        </xpath>
+         <xpath expr="//field[@name='priority']" position="attributes">
+            <attribute name="optional">show</attribute>
+        </xpath>
+
+
+
+
+    </field>
+  </record>
+     <record id="helpdesk_quick_create_ticket_form_inherit" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.quick_create_ticket_form"/>
+    <field name="arch" type="xml">
+         <xpath expr="//field[@name='partner_id']" position="after">
+             <field name="description" string="السؤال الاصلى"/>
+         </xpath>
+
+    </field></record>
+  <record id="helpdesk.helpdesk_ticket_action_main_tree" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">helpdesk.ticket</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="search_view_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first ticket.
+                </p><p>To get things done, use activities and status on tickets.<br/>
+                Chat in real time or by email to collaborate efficiently.
+            </p>
+        </field>
+    </record>
+
+    <record id="helpdesk.helpdesk_ticket_action_main_my" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">helpdesk.ticket</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="search_view_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="context">{'search_default_my_ticket': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first ticket.
+                </p><p>To get things done, use activities and status on tickets.<br/>
+                Chat in real time or by email to collaborate efficiently.
+            </p>
+        </field>
+    </record>
+
+ <record id="helpdesk.helpdesk_ticket_action_main" model="ir.actions.act_window">
+        <field name="name">All Tickets</field>
+        <field name="res_model">helpdesk.ticket</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="search_view_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="view_id" ref="helpdesk.helpdesk_ticket_view_kanban_no_create"/>
+        <field name="context">{'search_default_my_ticket': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first ticket.
+                </p><p>To get things done, use activities and status on tickets.<br/>
+                Chat in real time or by email to collaborate efficiently.
+            </p>
+        </field>
+    </record>
+
+ <record id="helpdesk_ticket_view_search_inherit_helpdesk_new_filter" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.inherit.timesheet</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="tag_ids" string="الكلمات المفتاحية"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+             <menuitem id="helpdesk.menu_helpdesk_root" name="Helpdesk"
+            sequence="-1"
+            web_icon="helpdesk,static/description/icon.png"
+            groups="helpdesk.group_helpdesk_user"/>
+
+
+
+
+    <record id="helpdesk.helpdesk_menu_team_dashboard" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(3, ref('helpdesk.group_helpdesk_user'))]"/>
+    </record>
+
+     <menuitem id="helpdesk.helpdesk_menu_team_dashboard" action="helpdesk.helpdesk_team_dashboard_action_main"
+        sequence="5" parent="helpdesk.menu_helpdesk_root" name="Overview"
+        groups="fatwa.group_mnu_overviews_fatwa"/>
+
+
+    <menuitem id="helpdesk.helpdesk_ticket_menu_all" name="All Tickets" action="helpdesk.helpdesk_ticket_action_main_tree"
+        sequence="1" parent="helpdesk.helpdesk_ticket_menu_main"/>
+
+</odoo>
+

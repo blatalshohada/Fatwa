@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.base.setup</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="0"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="General Settings" string="WhatsApp" data-key="whatsapp_helpdesk_create_ticket" groups="">
+                    <h2>Whatsapp Meta Integration</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 col-md-6 o_setting_box" title="Whatsapp Meta Integration">
+                            <div class="o_setting_right_pane" style="margin-bottom: 10px;">
+                                <span class="o_form_label">WhatsApp meta phone number</span>
+                                <div class="text-muted">
+                                    <field name="whatsapp_meta_phone_number_id" style="width: 100%;"/>
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane" style="margin-bottom: 10px;">
+                                <span class="o_form_label">WhatsApp meta api token</span>
+                                <div class="text-muted">
+                                    <field name="whatsapp_meta_api_token" password="True" style="width: 100%;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 col-md-6 o_setting_box" title="Whatsapp Meta Integration">
+                            <div class="o_setting_left_pane" style="margin-bottom: 10px;">
+                                <field name="module_whatsapp_meta_webhook_verify"/>
+                            </div>
+                            <div class="o_setting_right_pane" style="margin-bottom: 10px;">
+                                <span class="o_form_label">Verify meta webhook</span>
+                                <div class="text-muted">
+                                    Used to indicate that the webhook route is for verification purposes.
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane" style="margin-bottom: 10px;">
+                                <span class="o_form_label">WhatsApp webhook callback Url</span>
+                                <div class="text-muted">
+                                    Copy this and paste it in meta webhook callback url,Make sure the URL is HTTPS.
+                                </div>
+                                <div>
+                                    <field name="whatsapp_meta_webhook_callback_url"
+                                           style="border: 1px solid #ccc; border-radius: 5px; padding: 5px; width: 100%;"
+                                           force_save="1"/>
+                                    <button type="object" class="btn btn-primary" invisible="1" name="get_base_url"
+                                            sting="Refresh">Get Url
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane" style="margin-bottom: 10px;">
+                                <span class="o_form_label">WhatsApp webhook token</span>
+                                <div class="text-muted">
+                                    <field name="whatsapp_meta_webhook_token" style="width: 100%;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_general_configuration" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'whatsapp_api_settings', 'bin_size': False}</field>
+    </record>
+
+</odoo>

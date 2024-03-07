@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+
+
+    <record id="certificates_specialty_view_tree_new" model="ir.ui.view">
+        <field name="name">certificates.specialty.tree</field>
+        <field name="model">certificates.specialty</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"/>
+                <field name="certificate_name"/>
+                <field name="certificate_title"/>
+                <field name="certificates_specialists"/>
+                <field name="date"/>
+                  <field name="witness_type_id"/>
+                <field name="witness_name_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+            </tree>
+        </field>
+    </record>
+
+         <record id="certificates_specialty_view_form_new" model="ir.ui.view">
+        <field name="name">certificates.specialty.form</field>
+        <field name="model">certificates.specialty</field>
+        <field name="arch" type="xml">
+            <form>
+                  <sheet>
+                       <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                      <group>
+                        <group>
+                            <field name="certificate_title"/>
+                            <field name="certificates_specialists"/>
+                             <field name="date"/>
+
+                        </group>
+                          <group>
+                               <field name="witness_type_id"/>
+                            <field name="witness_name_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                          </group>
+                      </group>
+                      <group>
+                          <field name="certificate_name" string="Certificate"/>
+
+                      </group>
+                  </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field></record>
+
+         <record id="certificates_specialty_view_search_new" model="ir.ui.view">
+        <field name="name">certificates.specialty.search</field>
+        <field name="model">certificates.specialty</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+
+                <group expand="1" string="Group By">
+                      <filter string="name" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <record id="certificates_specialists_action" model="ir.actions.act_window">
+        <field name="name">Certificates of specialists</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">certificates.specialty</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+           <menuitem action="certificates_specialists_action" id="certificates_specialists_menu"
+              parent="helpdesk.helpdesk_menu_config"
+              name="Certificates of specialists"
+             sequence="100"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_wizard1,access_wizard1_name,model_wizard_helpdesk_report1,base.group_user,1,1,1,1

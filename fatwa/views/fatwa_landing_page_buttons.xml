@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="landing_buttons_view_form_new" model="ir.ui.view">
+            <field name="name">landing.buttons.view.form</field>
+            <field name="model">landing.page</field>
+            <field name="arch" type="xml">
+                <form string="Landing Link">
+                    <sheet>
+                        <group>
+                            <group>
+                            <field name="name"/>
+                            <field name="action_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_fatwa_landing_buttons_tree" model="ir.ui.view">
+            <field name="name">fatwa.landing.buttons.tree</field>
+            <field name="model">landing.page</field>
+            <field name="arch" type="xml">
+                <tree string="type">
+                    <field name="name" />
+                    <field name="action_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="fatwa_landing_buttons_action_main" model="ir.actions.act_window">
+            <field name="res_model">landing.page</field>
+            <field name="name">روابط الصفحة الرئيسة</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    روابط الصفحة الرئيسة
+                </p>
+            </field>
+        </record>
+        <record id="landing_buttons_tree_id" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_fatwa_landing_buttons_tree"/>
+            <field name="act_window_id" ref="fatwa_landing_buttons_action_main"/>
+        </record>
+        <record id="landing_buttons_form_id" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="landing_buttons_view_form_new"/>
+            <field name="act_window_id" ref="fatwa_landing_buttons_action_main"/>
+        </record>        			
+        <menuitem id="fatwa_landing_buttons"
+            name="روابط الصفحة الرئيسة"
+            action="fatwa_landing_buttons_action_main"
+            parent="helpdesk.helpdesk_menu_config"
+            sequence="5100" />
+    </data>
+</odoo>

@@ -1,0 +1,129 @@
+<odoo>
+     <record id="paperformat_fatwa" model="report.paperformat">
+        <field name="name">fatwa report</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">40</field>
+        <field name="dpi">95</field>
+    </record>
+
+
+   <report string="تقرير الفتوى"
+                id="grinding_ticket_id"
+                model="helpdesk.ticket"
+                report_type="qweb-pdf"
+                name="fatwa.grinding_report_temp"
+                file="fatwa.grinding_report_temp"
+           paperformat="fatwa.paperformat_fatwa"
+
+                print_report_name="' %s'% (object.display_name)"
+
+
+        />
+
+         <template id="grinding_report_temp">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page" >
+                            <div class="oe_structure"/>
+
+                           <u><h5 class="text-center" style="margin-top:60px;">
+                                Ticket -
+                                <span t-esc="o.name"/>
+                            </h5></u>
+                            <br/>
+
+                            <div class="row mt32 mb32" style="text-align: right" >
+
+                                 <div class="col-auto" style="width:300px;">
+                                    <strong>المستفتى </strong>
+                                    <p t-field="o.partner_id" />
+                                </div>
+                                <div class="col-auto" style="width:300px;">
+                                    <strong>عنوان المستفتى </strong>
+                                    <p t-field="o.partner_id.street" />
+                                </div>
+
+                                  <div class="col-auto" style="width:300px;">
+                                    <strong> بريد المستفتى </strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.partner_email" style="width:300px;"/>
+                                </div>
+
+                            </div>
+
+                            <div class="row mt32 mb32" style="text-align: right" >
+
+                                  <div class="col-auto" style="width:300px;">
+                                    <strong>حالة الفتوى</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.stage_id.name" style="width:300px;"/>
+                                </div>
+                                <div class="col-auto" style="width:300px;">
+                                    <strong>الجهة المرسلة</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.sender_id" style="width:300px;"/>
+                                </div>
+                                 <div class="col-auto" style="width:300px;">
+                                    <strong>نوع السوال</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.ticket_type_id" style="width:300px;"/>
+                                </div>
+
+
+                            </div>
+                              <div class="row mt32 mb32" style="text-align: right" >
+
+                           <div class="col-auto" style="width:300px;">
+                                    <strong>نوع الفتوى</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.department_id" style="width:300px;"/>
+                                </div>
+                                   <div class="col-auto" style="width:300px;">
+                                    <strong>حالة السوال</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.question_status_id" style="width:300px;"/>
+                                </div>
+
+                                  <div class="col-auto" style="width:300px;">
+                                    <strong>مسند الى</strong>
+<!--                                    <br/>-->
+                                    <p t-field="o.user_id" style="width:300px;"/>
+                                </div>
+
+
+                            </div>
+                            <br/>
+
+                                 <div style="text-align: right" >
+                                    <strong>السوال </strong>
+                                    <p t-field="o.description" style="width:300px;"/>
+                                </div>
+                                 <br/>
+
+                                <div >
+                                    <strong>الرد على السوال </strong>
+
+                                    <p t-field="o.fatwa_replay" />
+                                </div>
+
+
+
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+</odoo>

@@ -1,0 +1,112 @@
+<odoo>
+    <data>
+   <record id="schdule_activity_helpdesk" model="mail.activity.type">
+        <field name="name">Notification helpdesk ticket</field>
+        <field name="icon">fa-envelope</field>
+        <field name="res_model_id" ref="helpdesk.model_helpdesk_ticket"/>
+    </record>
+
+
+       <record id="helpdesk_ticket_inherit_new" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+
+
+               <xpath expr="//field[@name='kanban_state']" position="before">
+                     <field name="state" widget="statusbar"   invisible="0"/>
+               </xpath>
+
+         <xpath expr="//button[@name='assign_ticket_to_self']" position="after">
+              <button name="button_to_treat" string="معالجة" type="object" states="receive,fatwa" class="oe_highlight" />
+              <button name="button_fatwa" string="افتاء"  states="to_treat,saved,studying" type="object" class="oe_highlight" />
+              <button name="button_studying" string="تحت الدراسة"  states="fatwa" type="object" class="oe_highlight" />
+<!--             <button name="button_close" string="اغلاق" type="object"  states="studying,fatwa" class="oe_highlight" invisible="1"/>-->
+             <button name="button_receive" string="عودة للأصل" type="object"     attrs="{'invisible': [('state', '=', 'receive')]}" class="oe_highlight" />
+
+             <button name="button_fake" string="وهمية" type="object" states="receive" class="oe_highlight" />
+              <button name="button_repeated" string="مكررة"  states="to_treat" type="object" class="oe_highlight" />
+              <button name="button_reserved" string="محجوزة"  states="to_treat" type="object" class="oe_highlight" />
+             <button name="button_urgent" string="مستعجلة" type="object"  states="to_treat" class="oe_highlight" />
+             <button name="button_edit" string="تعديل" type="object"  states="urgent" class="oe_highlight" />
+
+              <button name="button_choiced" string="مختارة" type="object" states="fatwa" class="oe_highlight" />
+               <button name="button_resolution" string="قرار" type="object" states="fatwa" class="oe_highlight" />
+              <button name="button_refused" string="مرفوضة"   states="fatwa" type="object" class="oe_highlight" />
+              <button name="button_saved" string="محفوظة"  states="fatwa" type="object" class="oe_highlight" />
+
+
+
+
+
+
+
+
+             <button name="onchange_stage_id" string="ارسال اشعار" type="object" class="oe_highlight"/>
+               <button name="confirm_mail" string="ارسال الاجابة عبر الايميل" type="object" class="oe_highlight"/>
+            </xpath>
+                <xpath expr="//field[@name='ticket_type_id']" position="after">
+                    <field name="question_status_id" invisible="1"/>
+                    <field name="ticket_id" string="فتوى مرجعية من الارشيف"  />
+                    <field  name="priority_value" invisible="1"/>
+
+
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field  name="partner_phone"  invisible="1"/>
+                     <field  name="fatwa_links"  widget="url"  groups="fatwa.group_restrict_manage_operation,fatwa.group_restrict_manage_fatwa"/>
+
+
+                </xpath>
+                    <xpath expr="//field[@name='stage_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                   <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                  <xpath expr="//field[@name='partner_name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                  <xpath expr="//form/sheet" position="inside">
+                      <notebook>
+                          <page string="فتاوى ذات صلة">
+                              <field name="ticket_ids">
+                                  <tree>
+                                      <field name="name"/>
+                                      <field name="seq"/>
+                                        <field name="partner_id" optional="show"/>
+                                          <field name="user_id" optional="show"/>
+                                      <field name="fatwa_replay" string="الرد على الفتوى"/>
+                                  </tree>
+
+
+                              </field>
+
+                          </page>
+                      </notebook>
+                  </xpath>
+            </field></record>
+
+          <record id="helpdesk_thelpdesk_tickets_view_tree_new" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='stage_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                     <xpath expr="//field[@name='stage_id']" position="after">
+                  <field name="state"/>
+                </xpath>
+
+
+            </field></record>
+
+    </data>
+</odoo>

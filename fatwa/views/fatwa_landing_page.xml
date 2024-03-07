@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_fatwa_landing_page" model="ir.ui.view">
+            <field name="name">fatwa.landing.page</field>
+            <field name="model">landing.page</field>
+            <field name="arch" type="xml">
+                <form>
+                     <section class="fatwa">
+                        <div class="wrapper">
+                            <div class="right_part">
+                                <img src="/helpdesk/static/src/img/Untitled-2.png" alt=" helpdesk" />
+                            </div>
+                            <div class="left_part">
+                                <div class="logo">
+                                    <img src="/helpdesk/static/src/img/my_logo.png" alt="logo" />
+                                </div>
+                                <div class="nav">
+                                <ul>
+                                    <li>
+                                        <a id="lnk_0" href="/web#action=155&amp;model=helpdesk.ticket&amp;view_type=kanban&amp;cids=1&amp;menu_id=103"> كافة الفتاوى </a>
+                                    </li>
+                                    <li>
+                                        <a id="lnk_1" href="/web#action=154&amp;model=helpdesk.ticket&amp;view_type=kanban&amp;cids=1&amp;menu_id=103"> خاصتي </a>
+                                    </li>
+                                    <li>
+                                        <a id="lnk_2" href="/web#action=210&amp;model=helpdesk.ticket&amp;view_type=list&amp;cids=1&amp;menu_id=103"> مختارة </a>
+                                    </li>
+                                    <li>
+                                        <a id="lnk_3" href="/web#action=211&amp;model=helpdesk.ticket&amp;view_type=list&amp;cids=1&amp;menu_id=103"> تحت الدراسة </a>
+                                    </li>
+                                    <li>
+                                        <a id="lnk_4" href="/web#action=199&amp;model=helpdesk.ticket&amp;view_type=list&amp;cids=1&amp;menu_id=103"> الأرشيف </a>
+                                    </li>
+                                    <li>
+                                        <a id="lnk_5" href="/web#action=74&amp;model=res.users&amp;view_type=list&amp;cids=1&amp;menu_id=103"> الصلاحيات </a>
+                                    </li>
+                                </ul>
+                                    <div class="shape">
+
+                                        <img src="/helpdesk/static/src/img/shape.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        قال رسول الله صلى الله عليه وسلم : (من أفتى بفتوى غير ثبت فإنما
+                                        إثمه
+                                        على
+                                        من أفتاه).
+                                    </p>
+                                    <span>
+                                        والمعنى: مَن استَفتى غَيرَه وطلَبَ منه إيضاحَ أمرٍ مِن أمورِ
+                                        الدِّينِ،
+                                        فأجابَه المُفتي بغيرِ عِلمٍ، فإنَّ إثمَ المُستفتِي يقعُ على
+                                        المُفتِي
+                                        الذي أعطاهُ جوابًا.
+                                    </span>
+                                </div>
+                                <div class="user">
+                                    <div>
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle d-inline-flex" href="#"
+                                                role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <img src="/helpdesk/static/src/img/cog.png" alt="" />
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="/web#id=&amp;action=84&amp;model=res.config.settings&amp;view_type=form&amp;cids=&amp;menu_id=4">الإعدادات</a>
+                                                <a class="dropdown-item" href="/web#action=74&amp;model=res.users&amp;view_type=list&amp;cids=1&amp;menu_id=103">المستخدمون</a>
+                                                <a class="dropdown-item" href="/web#action=720&amp;model=landing.page&amp;view_type=list&amp;cids=&amp;menu_id=103">الروابط</a>
+                                                <a class="dropdown-item" href="/web#action=35&amp;model=ir.module.module&amp;view_type=kanban&amp;cids=&amp;menu_id=5">التطبيقات</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user_info">
+                                        <span class="admin_name">   </span>
+                                        <img src="/helpdesk/static/src/img/user.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            @import
+                            url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&amp;display=swap");
+                            html,
+                            body {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                            direction: rtl;
+                            }
+
+                            * {
+                            box-sizing: border-box;
+                            }
+
+                            body {
+                            font-family: "Tajawal", sans-serif;
+                            }
+
+                            .fatwa {
+                            width:100%;
+                            height: 100vh;
+                            background-color: #F4F4F4;
+                            padding-right: 24px;
+                            direction:rtl;
+                            text-align: start;
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa {
+                            padding: 0;
+                            }
+                            }
+                            .fatwa .wrapper {
+                            display: flex;
+                            height: 100%;
+                            }
+                            .fatwa .wrapper .right_part {
+                            width: 330px;
+                            height: 100%;
+                            background-color: #fff;
+                            }
+                            @media (max-width: 1600px) {
+                            .fatwa .wrapper .right_part {
+                            width: 250px;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .right_part {
+                            width: 100px;
+                            }
+                            }
+                            .fatwa .wrapper .right_part img {
+                            height: 100%;
+                            width: 100%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                            }
+                            .fatwa .wrapper .left_part {
+                            flex: 1;
+
+                            background-image: url(/helpdesk/static/src/img/bg.png);
+                            background-size: cover;
+                            background-position: center;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            position: relative;
+                            }
+                            .fatwa .wrapper .left_part .logo img {
+                            margin-bottom: 30px;
+                            width:250px;
+                            }
+                            @media (max-width: 1400px) {
+                            .fatwa .wrapper .left_part .logo img {
+                            width: 200px;
+                            margin: 16px;
+                            }
+                            }
+                            @media (max-width: 1200px) {
+                            .fatwa .wrapper .left_part .logo img {
+                            width: 150px;
+                            }
+                            }
+                            @media (max-width: 767px) {
+                            .fatwa .wrapper .left_part .logo img {
+                            width: 100px;
+                            margin: 0 0 8px 0;
+                            }
+                            }
+                            @media (max-width:575px) {
+                            .fatwa .wrapper .left_part .logo img {
+                            width: 70px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .nav {
+                            width: 100%;
+                            position: relative;
+                            }
+                            .fatwa .wrapper .left_part .nav ul {
+                            width:100%;
+                            display: flex;
+                            padding: 0;
+                            margin: 0;
+                            list-style: none;
+                            background-color: #2E8C99;
+                            position: relative;
+                            z-index: 10;
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .nav ul {
+                            flex-wrap: wrap;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .nav ul li a {
+                            text-decoration: none;
+                            font-size: 32px;
+                            color: #fff;
+                            padding: 16px 36px;
+
+                            background-image: url(/helpdesk/static/src/img/trg.png);
+                            background-position: left;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            background-size: contain;
+                            }
+                            @media (max-width: 1600px) {
+                            .fatwa .wrapper .left_part .nav ul li a {
+                            font-size: 20px;
+                            }
+                            }
+                            @media (max-width: 1200px) {
+                            .fatwa .wrapper .left_part .nav ul li a {
+                            font-size: 16px;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .nav ul li {
+                            flex: 25%;
+                            }
+                            .fatwa .wrapper .left_part .nav ul li a {
+                            background-image: none;
+                            width: 100%;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .nav ul li {
+                            flex: 50%;
+                            }
+                            }
+                            @media (max-width: 575px) {
+                            .fatwa .wrapper .left_part .nav ul li a {
+                            font-size: 14px;
+                            padding:6px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .nav .shape {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            }
+                            .fatwa .wrapper .left_part .description {
+                            margin-top: 80px;
+                            color: #3F3F3F;
+                            max-width: 868px;
+                            width: 100%;
+                            margin-right: auto;
+                            margin-left: auto;
+                            position: relative;
+                            }
+                            @media (max-width: 1200px) {
+                            .fatwa .wrapper .left_part .description {
+                            margin-top: 16px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .description p {
+                            font-size: 24px;
+                            margin: 0;
+                            }
+                            @media (max-width: 1200px) {
+                            .fatwa .wrapper .left_part .description p {
+                            max-width: 750px;
+                            padding: 0 16px;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .description p {
+                            font-size: 14px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .description span {
+                            color: #3f3f3f;
+                            font-size: 22px;
+                            }
+                            @media (max-width: 1200px) {
+                            .fatwa .wrapper .left_part .description span {
+                            max-width: 750px;
+                            display: block;
+                            padding: 0 16px;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .description span {
+                            font-size: 14px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .user {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            position: absolute;
+                            top: 125px;
+                            left: 75px;
+                            }
+                            .fatwa .wrapper .left_part .user .dropdown .dropdown-toggle{
+                                display:inline-flex
+                            }
+                            .fatwa .wrapper .left_part .user .dropdown .dropdown-toggle::after{
+                                display:none !important;
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .user img {
+                            width: 35px;
+                            }
+                            }
+                            .fatwa .wrapper .left_part .user .user_info {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            height: 48px;
+                            }
+                            .fatwa .wrapper .left_part .user .user_info span {
+                            border: 1px solid #7A5151;
+                            border-radius: 24px;
+                            height: 100%;
+                            display: inline-flex;
+                            align-items: center;
+                            padding-inline-end: 64px;
+                            padding-inline-start: 29px;
+                            color: #A0A0A0;
+                            font-size: 22px;
+                            }
+                            .fatwa .wrapper .left_part .user .user_info img {
+                            position: absolute;
+                            left: 0;
+                            }
+                            @media (max-width: 1600px) {
+                            .fatwa .wrapper .left_part .user {
+                            top: 50px;
+                            left: 50px;
+                            gap: 6px;
+                            }
+                            }
+                            @media (max-width: 991px) {
+                            .fatwa .wrapper .left_part .user {
+                            top: 10px;
+                            left: 10px;
+                            gap: 6px;
+                            }
+                            .fatwa .wrapper .left_part .user .user_info {
+                            height: 35px;
+                            }
+                            .fatwa .wrapper .left_part .user .user_info span {
+                            padding-inline-start: 16px;
+                            font-size: 16px;
+                            padding-inline-end: 44px;
+                            }
+                            .fatwa .wrapper .left_part .user .user_info img {
+                            width: 35px;
+                            }
+                            }
+                            .o_control_panel, .o_main_navbar {
+                            display: none !important;
+                            }
+
+                            .o_kanban_view{
+                            padding:0 !important;
+                            margin:0;
+                            }
+                            .oe_kanban_color_1.o_kanban_record{
+                            display:none !important;
+                            }
+
+                            .o_form_view.o_form_nosheet{
+                            padding:0;
+                            }
+                            /*# sourceMappingURL=landing.css.map */
+                        </style>
+                    </section>
+
+                </form>
+
+                <script>
+                    var that_odoo = odoo;
+
+                    $(function(){
+                        let myName = $('.oe_topbar_name').text();
+                        $('.admin_name').text(myName);
+                    })
+
+                    try
+                    {
+                        //define service once, for the first time
+                        odoo.define('landing.page', function(require){
+                            "use strict";
+                            //console.log('hi odoo define');
+                            $(document).ready(function() {
+                                var rpc = require('web.rpc');
+                                
+                                function getActionId(){
+                                        var domain = []; //['xml_id', '=', helpdesk.helpdesk_ticket_action_main]
+                                        var fields = []; //empty to bring all fields
+                                        var args = [domain, fields];
+
+                                        var res = rpc.query({
+                                            model: 'landing.page',
+                                            method: 'search_read',//don't use search, it brings only IDs
+                                            args: args
+                                        }).then(function (links) {
+                                            var hrefs = links.forEach(setID);
+                                            function setID(item, index, _links){
+                                                var href = `/web#action=${item.action_id}&amp;model=helpdesk.ticket&amp;view_type=kanban&amp;cids=1&amp;menu_id=103`;
+                                                $(`#lnk_${index}`).attr('href', href).text(item.name);
+                                            }
+                                        });
+                                    };
+                                    
+                                    that_odoo.getActionId_GL = getActionId;
+                                    that_odoo.getActionId_GL();
+                                });
+                        });                    
+                    }
+                    catch(er)
+                    {
+                        //alert('er');//service already defined
+                        if(typeof(that_odoo.getActionId_GL) == 'function')
+                        {
+                            that_odoo.getActionId_GL();
+                        }
+                    }
+                </script>
+
+            </field>
+        </record>
+        <record id="fatwa_landing_action_main" model="ir.actions.act_window">
+            <field name="name">الصفحة الرئيسة لمكتب الفتوى</field>
+            <field name="res_model">landing.page</field>
+            <field name="view_mode">form</field>
+            <field name="context">{}</field>
+            <field name="view_id" eval="view_fatwa_landing_page" />
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    الصفحة الرئيسة لمكتب الفتوى
+                </p>
+            </field>
+        </record>
+        <menuitem id="fatwa_landing"
+            name="الرئيسة"
+            action="fatwa_landing_action_main"
+            parent="helpdesk.menu_helpdesk_root"
+            groups="helpdesk.group_helpdesk_user"
+            sequence="4" />
+    </data>
+</odoo>

@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+
+
+    <record id="fatwa_extrapolation_from_view_tree_new" model="ir.ui.view">
+        <field name="name">fatwa.extrapolation.tree</field>
+        <field name="model">fatwa.extrapolation</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"/>
+                <field name="note_type"/>
+                <field name="note_title"/>
+                <field name="priority_level"/>
+                  <field name="description"/>
+                <field name="note_effect"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+            </tree>
+        </field>
+    </record>
+
+         <record id="fatwa_extrapolation_from_view_form_new" model="ir.ui.view">
+        <field name="name">fatwa.extrapolation.form</field>
+        <field name="model">fatwa.extrapolation</field>
+        <field name="arch" type="xml">
+            <form>
+                  <sheet>
+                       <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                      <group>
+                        <group>
+                            <field name="note_title"/>
+                            <field name="priority_level"/>
+
+                        </group>
+                          <group>
+                               <field name="note_type"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                          </group>
+                      </group>
+
+                      <group>
+                          <field name="description"/>
+                      </group>
+
+                        <group>
+                          <field name="note_effect"/>
+                      </group>
+
+
+                  </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field></record>
+
+         <record id="fatwa_extrapolation_from_view_search_new" model="ir.ui.view">
+        <field name="name">lfatwa.extrapolation.search</field>
+        <field name="model">fatwa.extrapolation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+
+                <group expand="1" string="Group By">
+                      <filter string="name" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <record id="fatwa_extrapolation_from_action" model="ir.actions.act_window">
+        <field name="name">استقراء الفتاوى</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fatwa.extrapolation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+           <menuitem action="fatwa_extrapolation_from_action" id="fatwa_extrapolation_from_menu"
+              parent="helpdesk.helpdesk_menu_config"
+              name="استقراء الفتاوى"
+             sequence="300"/>
+
+
+    </data>
+</odoo>

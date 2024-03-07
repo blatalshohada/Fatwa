@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="group_restrict_manage_receive" model="res.groups">
+        <field name="name">استقبال </field>
+    </record>
+        <record id="group_restrict_manage_operation" model="res.groups">
+        <field name="name">معالجة</field>
+    </record>
+        <record id="group_restrict_manage_fatwa" model="res.groups">
+        <field name="name">افتاء</field>
+    </record>
+
+        <record id="group_mnu_overviews_fatwa" model="res.groups">
+        <field name="name">عرض قائمة النظره العامه</field>
+    </record>
+
+         <!-- <record id="helpdesk_user_ticket_stage_rule" model="ir.rule">
+            <field name="name">Helpdesk User</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">[('stage_id.team_ids.member_ids','in', user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('helpdesk.group_helpdesk_user'))]"/>
+         </record> -->
+
+         <record id="helpdesk_manager_ticket_stage_rule" model="ir.rule">
+            <field name="name">Helpdesk manager</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+           <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('helpdesk.group_helpdesk_manager'))]"/>
+         </record>
+
+         <record id="helpdesk_receive_ticket_stage_rule" model="ir.rule">
+            <field name="name">Helpdesk receive</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">[('stage_id.id', 'in', [1, 2])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('fatwa.group_restrict_manage_receive'))]"/>
+         </record>
+
+         <record id="helpdesk_operation_ticket_stage_rule" model="ir.rule">
+            <field name="name">Helpdesk operation</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('fatwa.group_restrict_manage_operation'))]"/>
+         </record>
+
+         <record id="helpdesk_fatwa_ticket_stage_rule" model="ir.rule">
+            <field name="name">Helpdesk fatwa</field>
+            <field name="model_id" ref="helpdesk.model_helpdesk_ticket"/>
+            <field name="domain_force">[('stage_id.id', 'not in', [1, 14])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('fatwa.group_restrict_manage_fatwa'))]"/>
+         </record>
+
+    </data>
+</odoo>

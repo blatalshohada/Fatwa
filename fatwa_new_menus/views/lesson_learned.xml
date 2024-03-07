@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+
+
+    <record id="lessons_learned_from_view_tree_new" model="ir.ui.view">
+        <field name="name">lessons.learned.from.tree</field>
+        <field name="model">lessons.learned.from</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"/>
+                <field name="lesson_name"/>
+                <field name="lesson_type_id"/>
+                <field name="priority_level"/>
+                  <field name="description"/>
+                <field name="corrective_action"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+            </tree>
+        </field>
+    </record>
+
+         <record id="lessons_learned_from_view_form_new" model="ir.ui.view">
+        <field name="name">lessons.learned.from.form</field>
+        <field name="model">lessons.learned.from</field>
+        <field name="arch" type="xml">
+            <form>
+                  <sheet>
+                       <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                      <group>
+                        <group>
+                            <field name="lesson_name"/>
+                            <field name="priority_level"/>
+
+                        </group>
+                          <group>
+                               <field name="lesson_type_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                          </group>
+                      </group>
+
+                      <group>
+                          <field name="description"/>
+                      </group>
+
+                        <group>
+                          <field name="corrective_action"/>
+                      </group>
+
+
+                  </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+
+            </form>
+        </field></record>
+
+         <record id="lessons_learned_from_view_search_new" model="ir.ui.view">
+        <field name="name">lessons.learned.from.search</field>
+        <field name="model">lessons.learned.from</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+
+                <group expand="1" string="Group By">
+                      <filter string="name" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <record id="lessons_learned_from_action" model="ir.actions.act_window">
+        <field name="name">Lessons Learned From</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lessons.learned.from</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+           <menuitem action="lessons_learned_from_action" id="lessons_learned_from_menu"
+              parent="helpdesk.helpdesk_menu_config"
+              name="Lessons Learned From"
+             sequence="200"/>
+
+
+    </data>
+</odoo>

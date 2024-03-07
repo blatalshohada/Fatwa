@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+
+
+       <record id="helpdesk_ticket_inherit_new_date" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.inherit</field>
+    <field name="model">helpdesk.ticket</field>
+    <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field  name="date" invisible="1"/>
+
+                </xpath>
+
+            </field></record>
+    </data>
+</odoo>

@@ -1,0 +1,423 @@
+<odoo>
+    <data>
+
+
+
+
+        <record id="ticket_helpdesk_to_treat_action" model="ir.actions.act_window">
+            <field name="name">اسنثناءات المعالجة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","to_treat")]</field>
+        </record>
+
+
+
+        <record id="ticket_helpdesk_save_order_action" model="ir.actions.act_window">
+            <field name="name">المحجوزات</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("save_order","=",True)]</field>
+        </record>
+         <record id="ticket_helpdesk_save_order_action_state" model="ir.actions.act_window">
+            <field name="name">المحجوزة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'reserved')]</field>
+        </record>
+
+
+         <record id="ticket_helpdesk_fatwa_action" model="ir.actions.act_window">
+            <field name="name">مابعد الافتاء</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","fatwa")]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_fatwa_menu"
+                parent="helpdesk.menu_helpdesk_root"
+               name="مابعد الافتاء"
+                action="ticket_helpdesk_fatwa_action"
+                sequence="12"
+               />
+
+
+
+                <menuitem
+                id="ticket_helpdesk_users_menu"
+                parent="helpdesk.menu_helpdesk_root"
+                name="المستخدمين"
+                action="base.action_res_users"
+                sequence="16"
+               />
+
+
+         <record id="ticket_helpdesk_archive_action" model="ir.actions.act_window">
+            <field name="name">الارشيف</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("active","=",False)]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_archive_menu"
+                parent="helpdesk.menu_helpdesk_root"
+                name="الارشيف"
+                action="ticket_helpdesk_archive_action"
+                sequence="15"
+               />
+
+<!--        submenu for fatwa-->
+        <record id="ticket_helpdesk_fatwa_archive_resolution" model="ir.actions.act_window">
+            <field name="name">قرار</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'resolution')]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_fatwa_menu_resolution"
+                parent="ticket_helpdesk_fatwa_menu"
+               name="قرار"
+                action="ticket_helpdesk_fatwa_archive_resolution"
+                sequence="0"
+               />
+
+         <record id="ticket_helpdesk_fatwa_archive_yes_action" model="ir.actions.act_window">
+            <field name="name">يأرشف /ينشر</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'yes'),("publish","=",'yes')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_yes"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="يأرشف /ينشر"-->
+<!--                action="ticket_helpdesk_fatwa_archive_yes_action"-->
+<!--                sequence="1"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_archive_no_action" model="ir.actions.act_window">
+            <field name="name">لا يأرشف /لاينشر</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'no'),("publish","=",'no')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_no"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="لا يأرشف /لاينشر"-->
+<!--                action="ticket_helpdesk_fatwa_archive_no_action"-->
+<!--                sequence="2"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_archive_yes_no_action" model="ir.actions.act_window">
+            <field name="name"> يأرشف /لاينشر</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'yes'),("publish","=",'no')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_yes_no"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="يأرشف /لاينشر"-->
+<!--                action="ticket_helpdesk_fatwa_archive_yes_no_action"-->
+<!--                sequence="3"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_archive_yes_no_action_no_select" model="ir.actions.act_window">
+            <field name="name"> لاينشر/غيرمحدد</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'no_selected'),("publish","=",'no')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_yes_no_select"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="لاينشر/غيرمحدد"-->
+<!--                action="ticket_helpdesk_fatwa_archive_yes_no_action_no_select"-->
+<!--                sequence="3"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_archive_no_selected_action" model="ir.actions.act_window">
+            <field name="name"> يأرشف /غير محدد</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'yes'),("publish","=",'no_selected')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_no_selected"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="يأرشف /غير محدد"-->
+<!--                action="ticket_helpdesk_fatwa_archive_no_selected_action"-->
+<!--                sequence="3"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_archive_no_yes_action" model="ir.actions.act_window">
+            <field name="name"> غير مؤرشف /ينشر</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("archive","=",'no'),("publish","=",'yes')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_archive_no_yes"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="لا يأرشف /ينشر"-->
+<!--                action="ticket_helpdesk_fatwa_archive_no_yes_action"-->
+<!--                sequence="4"-->
+<!--               />-->
+
+
+        <record id="ticket_helpdesk_fatwa_choices_fatwa_action" model="ir.actions.act_window">
+            <field name="name">فتاوى مختارة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("choices_fatwa","=",True)]</field>
+        </record>
+         <record id="ticket_helpdesk_fatwa_choices_fatwa_action_state" model="ir.actions.act_window">
+            <field name="name">فتاوى مختارة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'choiced')]</field>
+        </record>
+
+
+        <record id="ticket_helpdesk_fatwa_send_fatwa_action" model="ir.actions.act_window">
+            <field name="name">فتاوى التى لا ترسل</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("send","=",True)]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_send_fatwa"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="فتاوى التى لا ترسل"-->
+<!--                action="ticket_helpdesk_fatwa_send_fatwa_action"-->
+<!--                sequence="20"-->
+<!--               />-->
+
+         <record id="ticket_helpdesk_fatwa_for_study_action" model="ir.actions.act_window">
+            <field name="name">تحت الدراسة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("for_study","=",True)]</field>
+        </record>
+          <record id="ticket_helpdesk_fatwa_for_study_action_state" model="ir.actions.act_window">
+            <field name="name">تحت الدراسة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'studying')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_for_study"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="تحت الدراسة"-->
+<!--                action="ticket_helpdesk_fatwa_for_study_action"-->
+<!--                sequence="20"-->
+<!--               />-->
+        <record id="ticket_helpdesk_fatwa_for_saves_fatwa_action" model="ir.actions.act_window">
+            <field name="name">المحفوظات</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("fatwa_saves","=",True)]</field>
+        </record>
+
+          <record id="ticket_helpdesk_fatwa_for_saves_fatwa_action_state" model="ir.actions.act_window">
+            <field name="name">محفوظة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'saved')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_for_fatwa_saved"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="المحفوظات"-->
+<!--                action="ticket_helpdesk_fatwa_for_saves_fatwa_action"-->
+<!--                sequence="20"-->
+<!--               />-->
+
+        <record id="ticket_helpdesk_fatwa_refuse_action" model="ir.actions.act_window">
+            <field name="name">المرفوض (سلة المحذوفات)</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("refuse","=",True)]</field>
+        </record>
+        <record id="ticket_helpdesk_fatwa_refuse_action_state" model="ir.actions.act_window">
+            <field name="name">المرفوضة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=",'refused')]</field>
+        </record>
+
+<!--        <menuitem-->
+<!--                id="ticket_helpdesk_fatwa_menu_refuse"-->
+<!--                parent="ticket_helpdesk_fatwa_menu"-->
+<!--               name="المرفوض (سلة المحذوفات)"-->
+<!--                action="ticket_helpdesk_fatwa_refuse_action"-->
+<!--                sequence="20"-->
+<!--               />-->
+
+<!--njjjjjjjjjjjjjjjjjjjjjjjm-->
+          <record id="ticket_helpdesk_receive_action" model="ir.actions.act_window">
+            <field name="name">الاستقبال</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","receive")]</field>
+        </record>
+        <menuitem
+                id="ticket_helpdesk_receive_menu_root"
+                parent="helpdesk.menu_helpdesk_root"
+                name="الاستقبال"
+                sequence="10"
+               />
+
+        <menuitem
+                id="ticket_helpdesk_receive_menu"
+                parent="fatwa.ticket_helpdesk_receive_menu_root"
+                name="الاستقبال"
+                action="ticket_helpdesk_receive_action"
+                sequence="10"
+               />
+
+        <record id="ticket_helpdesk_to_treat_new_action" model="ir.actions.act_window">
+            <field name="name">المعالجة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","to_treat")]</field>
+        </record>
+         <menuitem
+                id="ticket_helpdesk_to_treat_menu_new_menu_root"
+                parent="helpdesk.menu_helpdesk_root"
+                name="المعالجة"
+
+                sequence="10"
+               />
+
+        <menuitem
+                id="ticket_helpdesk_to_treat_menu_new_menu"
+                parent="fatwa.ticket_helpdesk_to_treat_menu_new_menu_root"
+                name="المعالجة"
+                action="ticket_helpdesk_to_treat_new_action"
+                sequence="1"
+               />
+
+         <menuitem
+                id="ticket_helpdesk_save_menu_new_parent"
+              parent="fatwa.ticket_helpdesk_to_treat_menu_new_menu_root"
+                name="المحجوزة"
+                action="ticket_helpdesk_save_order_action_state"
+                sequence="2"
+               />
+
+
+        <record id="ticket_helpdesk_fatwa_action_new_action" model="ir.actions.act_window">
+            <field name="name">الافتاء</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","fatwa")]</field>
+        </record>
+        <menuitem
+                id="ticket_helpdesk_to_fatwa_menu_new_root"
+                parent="helpdesk.menu_helpdesk_root"
+                name="الافتاء"
+                sequence="10"
+               />
+
+        <menuitem
+                id="ticket_helpdesk_to_fatwa_menu_new"
+                parent="fatwa.ticket_helpdesk_to_fatwa_menu_new_root"
+                name="الافتاء"
+                action="ticket_helpdesk_fatwa_action_new_action"
+                sequence="1"
+               />
+         <menuitem
+                id="ticket_helpdesk_fatwa_menu_for_study_new_parent"
+                 parent="fatwa.ticket_helpdesk_to_fatwa_menu_new_root"
+               name="تحت الدراسة"
+                action="ticket_helpdesk_fatwa_for_study_action_state"
+                sequence="2"
+               />
+        <menuitem
+                id="ticket_helpdesk_fatwa_menu_choices_fatwa_parent"
+                 parent="fatwa.ticket_helpdesk_to_fatwa_menu_new_root"
+               name="فتاوى مختارة"
+                action="ticket_helpdesk_fatwa_choices_fatwa_action_state"
+                sequence="3"
+               />
+
+        <menuitem
+                id="ticket_helpdesk_fatwa_menu_for_fatwa_saved_new_parent"
+                parent="fatwa.ticket_helpdesk_to_fatwa_menu_new_root"
+               name="المحفوظة"
+                action="ticket_helpdesk_fatwa_for_saves_fatwa_action_state"
+                sequence="4"
+               />
+         <menuitem
+                id="ticket_helpdesk_fatwa_menu_refuse_new_parent"
+                 parent="fatwa.ticket_helpdesk_to_fatwa_menu_new_root"
+               name="المرفوضة"
+                action="ticket_helpdesk_fatwa_refuse_action_state"
+                sequence="20"
+               />
+
+         <record id="ticket_helpdesk_urgent_action" model="ir.actions.act_window">
+            <field name="name">المستعجلة</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","urgent")]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_to_urgent_menu"
+                parent="helpdesk.menu_helpdesk_root"
+                name="المستعجلة"
+                action="ticket_helpdesk_urgent_action"
+                sequence="10"
+               />
+
+         <record id="ticket_helpdesk_edit_action" model="ir.actions.act_window">
+            <field name="name">التعديل</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","edit")]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_edit_menu"
+                parent="helpdesk.menu_helpdesk_root"
+                name="التعديل"
+                action="ticket_helpdesk_edit_action"
+                sequence="10"
+               />
+
+        <record id="ticket_helpdesk_fake_action" model="ir.actions.act_window">
+            <field name="name">الوهمية</field>
+            <field name="res_model">helpdesk.ticket</field>
+            <field name="view_mode">tree,form</field>
+           <field name="domain">[("state","=","fake")]</field>
+        </record>
+
+        <menuitem
+                id="ticket_helpdesk_fake_new_menu"
+               parent="fatwa.ticket_helpdesk_receive_menu_root"
+                name="الوهمية"
+                action="ticket_helpdesk_fake_action"
+                sequence="10"
+               />
+
+
+
+
+
+    </data>
+</odoo>

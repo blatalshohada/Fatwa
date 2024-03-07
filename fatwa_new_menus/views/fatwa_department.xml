@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record id="fatwa_extend_department_menus_view_form" model="ir.ui.view">
+            <field name="name">fatwa.extend.question.menus.view.form</field>
+            <field name="model">fatwa.department</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="إسم القسم" class="oe_edit_only"/>
+                            <h1><field name="name" placeholder=""/></h1>
+                        </div>
+                        <group name="first" col="2">
+                            <field name="parent_id" string="القسم الرئيسي" class="oe_inline"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+     <record id="fatwa_extend_department_menus_view_tree" model="ir.ui.view">
+        <field name="name">fatwa.extend.question.menus.view.tree</field>
+        <field name="model">fatwa.department</field>
+        <field name="arch" type="xml">
+            <tree string="department">
+                <field name="display_name" string="القسم"/>
+            </tree>
+        </field>
+    </record>
+    <record id="fatwa_department_menus_action" model="ir.actions.act_window">
+        <field name="res_model">fatwa.department</field>
+        <field name="name">اقسام الفتوى</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+    <menuitem id="question_type_department_menu"
+              name="اقسام الفتوى"
+              action="fatwa_department_menus_action"
+               parent="helpdesk.helpdesk_menu_config"
+              sequence="600" />
+    </data>
+</odoo>

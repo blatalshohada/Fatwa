@@ -1,0 +1,578 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fatwa_new_menus
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-07 15:30+0000\n"
+"PO-Revision-Date: 2023-03-07 17:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__access_warning
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__access_warning
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_needaction
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_needaction
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_needaction
+msgid "Action Needed"
+msgstr "الاجراء التصحيحى"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_exception_decoration
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_exception_decoration
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_state
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_state
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_type_icon
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_type_icon
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_attachment_count
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_attachment_count
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__campaign_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__campaign_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__campaign_id
+msgid "Campaign"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.certificates_specialty_view_form_new
+msgid "Certificate"
+msgstr "الشهادة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__certificate_name
+msgid "Certificate Name"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__description
+msgid "Certificate text"
+msgstr "نص الشهادة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__certificate_title
+msgid "Certificate title"
+msgstr "عنوان الشهادة"
+
+#. module: fatwa_new_menus
+#: model:ir.actions.act_window,name:fatwa_new_menus.certificates_specialists_action
+#: model:ir.ui.menu,name:fatwa_new_menus.certificates_specialists_menu
+msgid "Certificates of specialists"
+msgstr "شهادات المتخصصين"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__certificates_specialists
+msgid "Certification specialty"
+msgstr "تخصص الشهادة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__company_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__company_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__company_id
+msgid "Company"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__corrective_action
+msgid "Corrective Action"
+msgstr "الاجراء التصحيحى"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__create_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__create_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__create_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__create_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__create_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__create_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__create_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__create_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__create_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__create_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__access_url
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__access_url
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__description
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__display_name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__display_name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__display_name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__display_name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__display_name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.actions.act_window,name:fatwa_new_menus.fatwa_extrapolation_from_action
+#: model:ir.ui.menu,name:fatwa_new_menus.fatwa_extrapolation_from_menu
+msgid "Fatwa Extrapolation"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_follower_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_follower_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_channel_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_channel_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_partner_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_partner_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__activity_type_icon
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__activity_type_icon
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.certificates_specialty_view_search_new
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.fatwa_extrapolation_from_view_search_new
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.lessons_learned_from_view_search_new
+msgid "Group By"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__id
+msgid "ID"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_exception_icon
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_exception_icon
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__activity_exception_icon
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__activity_exception_icon
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_needaction
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_unread
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_needaction
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_unread
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_needaction
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_has_error
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_has_sms_error
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_has_error
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_has_sms_error
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_has_error
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_is_follower
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_is_follower
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty____last_update
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation____last_update
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type____last_update
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from____last_update
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level____last_update
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__write_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__write_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__write_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__write_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__write_uid
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__write_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__write_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__write_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__write_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__write_date
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__lesson_name
+msgid "Lesson Title"
+msgstr "عنوان الدرس"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__lesson_type_id
+msgid "Lesson Type"
+msgstr "نوع الدرس"
+
+#. module: fatwa_new_menus
+#: model:ir.actions.act_window,name:fatwa_new_menus.lessons_learned_from_action
+#: model:ir.ui.menu,name:fatwa_new_menus.lessons_learned_from_menu
+msgid "Lessons Learned From"
+msgstr "الدروس المستفادة من"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_main_attachment_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_main_attachment_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__medium_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__medium_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__medium_id
+msgid "Medium"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_has_error
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_has_error
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__my_activity_date_deadline
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lesson_type__name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_priority_level__name
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_witness_type__name
+msgid "Name"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: code:addons/fatwa_new_menus/models/models.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_date_deadline
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_date_deadline
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_summary
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_summary
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_type_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_type_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__note_effect
+msgid "Note Effect"
+msgstr "اثر الملاحظة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__note_title
+msgid "Note Title"
+msgstr "عنوان الملاحظة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__note_type
+msgid "Note Type"
+msgstr "نوع الملاحظة"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_needaction_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_needaction_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_has_error_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_has_error_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_needaction_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_needaction_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_has_error_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_has_error_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__message_unread_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__message_unread_counter
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__access_url
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__access_url
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__priority_level
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__priority_level
+msgid "Priority Level"
+msgstr "درجة الاهمية"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__activity_user_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__activity_user_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_has_sms_error
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_has_sms_error
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__access_token
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__access_token
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__source_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__source_id
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__source_id
+msgid "Source"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__activity_state
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__activity_state
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__campaign_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__campaign_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign "
+"efforts, e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__medium_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__medium_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__source_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__source_id
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__activity_exception_decoration
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__activity_exception_decoration
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_unread
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_unread
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__message_unread_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__message_unread_counter
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__website_message_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_fatwa_extrapolation__website_message_ids
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_lessons_learned_from__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,help:fatwa_new_menus.field_certificates_specialty__website_message_ids
+#: model:ir.model.fields,help:fatwa_new_menus.field_fatwa_extrapolation__website_message_ids
+#: model:ir.model.fields,help:fatwa_new_menus.field_lessons_learned_from__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__witness_name_id
+msgid "Witness name"
+msgstr "اسم الشاهد"
+
+#. module: fatwa_new_menus
+#: model:ir.model.fields,field_description:fatwa_new_menus.field_certificates_specialty__witness_type_id
+msgid "Witness type"
+msgstr "نوع الشاهد"
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_certificates_specialty
+msgid "certificates.specialty"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_fatwa_extrapolation
+msgid "fatwa.extrapolation"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_lesson_type
+msgid "lesson.type"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_lessons_learned_from
+msgid "lessons.learned.from"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.certificates_specialty_view_search_new
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.fatwa_extrapolation_from_view_search_new
+#: model_terms:ir.ui.view,arch_db:fatwa_new_menus.lessons_learned_from_view_search_new
+msgid "name"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_priority_level
+msgid "priority.level"
+msgstr ""
+
+#. module: fatwa_new_menus
+#: model:ir.model,name:fatwa_new_menus.model_witness_type
+msgid "witness.type"
+msgstr ""

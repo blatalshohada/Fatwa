@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+         <record id="certificates_specialty_seq" model="ir.sequence">
+        <field name="name">certificates.specialty</field>
+        <field name="code">certificates.specialty</field>
+        <field name="padding">5</field>
+        <field eval="False" name="company_id"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+        <record id="prevous_next_seq" model="ir.sequence">
+        <field name="name">previous.next.store</field>
+        <field name="code">previous.next.store</field>
+        <field name="padding">5</field>
+        <field eval="False" name="company_id"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+         <record id="lessons_learned_from_seq" model="ir.sequence">
+        <field name="name">lessons.learned.from</field>
+        <field name="code">lessons.learned.from</field>
+        <field name="padding">5</field>
+        <field eval="False" name="company_id"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+   <record id="fatwa_extrapolation_from_seq" model="ir.sequence">
+        <field name="name">fatwa.extrapolation</field>
+        <field name="code">fatwa.extrapolation</field>
+        <field name="padding">5</field>
+        <field eval="False" name="company_id"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+
+
+    </data>
+</odoo>

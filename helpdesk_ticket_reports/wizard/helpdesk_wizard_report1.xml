@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+        <record id="view_wizard_helpdesk_report1" model="ir.ui.view">
+   <field name="name">wizard.helpdesk.report1.form</field>
+   <field name="model">wizard.helpdesk.report1</field>
+   <field name="type">form</field>
+   <field name="arch" type="xml">
+       <form>
+           <group>
+
+               <group>
+                  <field name="date_from"/>
+                   <field name="date_to"/>
+
+               </group>
+               <group>
+
+
+                        <field name="question_type_id"/>
+                       <field name="question_status_id"/>
+                        <field name="user_id"/>
+                       <field name="priority" widget="priority"/>
+
+
+                   </group>
+
+
+
+           </group>
+
+           <footer>
+               <button name="print_pdf" string="طباعة" type="object" class="oe_highlight"/>
+
+               <button string="الغاء" class="btn btn-default" special="cancel"/>
+           </footer>
+       </form>
+   </field>
+</record>
+
+         <record id="wizard_helpdesk_report1_action" model="ir.actions.act_window">
+            <field name="name"> عدد الاساله الواردة للنظام</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.helpdesk.report1</field>
+             <field name="view_mode">form</field>
+             <field name="target">new</field>
+        </record>
+
+
+
+        <menuitem action="wizard_helpdesk_report1_action"
+                  id="wizard_wizard_helpdesk_report1_menu"
+                  name="تقرير عدد الاساله الواردة للنظام "
+                  parent="helpdesk.helpdesk_ticket_report_menu_main"
+                  sequence="5000"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_cer,access_cer_name,model_certificates_specialty,base.group_user,1,1,1,1
+access_partner_cer2,access_cer_name2,model_witness_type,base.group_user,1,1,1,1
+access_partner_cer3,access_cer_name3,model_priority_level,base.group_user,1,1,1,1
+access_partner_cer4,access_cer_name4,model_lesson_type,base.group_user,1,1,1,1
+
+access_partner_cer5,access_cer_name5,model_lessons_learned_from,base.group_user,1,1,1,1
+access_partner_cer6,access_cer_name6,model_fatwa_extrapolation,base.group_user,1,1,1,1
+
+access_fatwa_department,access_department,model_fatwa_department,base.group_user,1,1,1,1
+access_fatwa_store,access_store,model_previous_next_store,base.group_user,1,1,1,1
+
+
+
+

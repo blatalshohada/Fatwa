@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+.fatwa {
+    height: 100vh;
+    background-color: #F4F4F4;
+    padding-right: 24px;
+    @media(max-width:991px){
+        padding: 0;
+    }
+    .wrapper {
+        display: flex;
+        height: 100%;
+
+        .right_part {
+            width: 330px;
+            height: 100%;
+            background-color: #fff;
+            @media(max-width:991px){
+                width: 100px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .left_part {
+            flex: 1;
+            background-image: url(../img/bg.png);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+
+            .nav {
+
+                width: 100%;
+                position: relative;
+
+                ul {
+                    display: flex;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    background-color: #2E8C99;
+                    position: relative;
+                    z-index: 10;
+                    @media(max-width:991px){
+                        flex-wrap: wrap;
+                    }
+                    li {
+                        
+                        a {
+                            text-decoration: none;
+                            font-size: 32px;
+                            color: #fff;
+                            padding: 16px 36px;
+                            background-image: url(../img/trg.png);
+                            background-position: left;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            background-size: contain;
+
+                            @media(max-width:1600px) {
+                                font-size: 20px;
+                                padding: 16px 24px;
+                            }
+
+                            @media(max-width:1200px) {
+                                font-size: 16px;
+                                padding: 16px 16px;
+                            }
+                        }
+
+                        @media(max-width:991px){
+                            flex: 25%;
+                            a{
+                                background-image: none;
+                                width: 100%;
+                            }
+                        }
+                        @media(max-width:991px){
+                            flex: 50%;
+                        }
+                        @media(max-width:575px){
+                            
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                .shape {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                }
+            }
+
+            .description {
+                margin-top: 80px;
+                color: #3F3F3F;
+                max-width: 868px;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                position: relative;
+                @media(max-width:1200px) {
+                    
+                    margin-top: 36px;
+                }
+
+                p {
+                    font-size: 24px;
+                    margin: 0;
+
+                    @media(max-width:1200px) {
+                        max-width: 750px;
+                        padding: 0 16px;
+                    }
+                    @media(max-width:991px) {
+                        font-size: 16px;
+                    }
+                }
+
+                span {
+                    color: #3f3f3f;
+                    font-size: 22px;
+                    @media(max-width:1200px) {
+                        max-width: 750px;
+                        display: block;
+                        padding: 0 16px;
+                    }
+                    @media(max-width:991px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: absolute;
+                top: 125px;
+                left: 75px;
+                @media(max-width:991px){
+                    img{
+                        width: 35px;
+                    }
+                }
+
+                .user_info {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    height: 48px;
+
+                    span {
+                        border: 1px solid #7A5151;
+                        border-radius: 24px;
+                        height: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        padding-inline-end: 64px;
+                        padding-inline-start: 29px;
+                        color: #A0A0A0;
+                        font-size: 22px;
+
+                    }
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+                @media(max-width:991px){
+                    top: 10px;
+                    left: 10px;
+                    gap: 6px;
+                    .user_info{
+                        height: 35px;
+                        span{
+                            padding-inline-start: 16px;
+                            font-size: 16px;
+                            padding-inline-end: 44px;
+                        }
+                        img{
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.o_control_panel, .o_main_navbar{
+    display: none !important;
+}

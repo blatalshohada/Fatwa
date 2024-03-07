@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <record id="helpdesk_ticket_view_form_inherited" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.form.inherited</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='assign_ticket_to_self']" position="after">
+                    <button type="object"
+                            name="send_message_on_whatsapp_fatwa"
+                            class="fa fa-whatsapp oe_highlight"
+                            string="ارسال الاجابة عبر الواتس آب"
+                    />
+                </xpath>
+                <xpath expr="//field[@name='description']" position="after">
+                    <notebook>
+                        <page name="whatsapp_messages" string="رسائل الواتس آب">
+                            <field name="whatsapp_message_ids" widget="one2many" nolabel="1"
+                                   readonly="1">
+                                <tree>
+                                    <field name="senderName"/>
+                                    <field name="to"/>
+                                    <field name="message_body"/>
+                                    <field name="time"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

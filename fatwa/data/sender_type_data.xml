@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="individual" model="sender.type">
+            <field name="name">individual</field>           
+        </record>
+        <record id="company" model="sender.type">
+            <field name="name">company</field>
+        </record>
+        <record id="Governmental" model="sender.type">
+            <field name="name">Governmental Institution</field>           
+        </record>
+        
+    </data>     
+</odoo>

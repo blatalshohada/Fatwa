@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sender_type,sender_type,model_sender_type,,1,1,1,1
+access_product_wizard2,access_status_name,model_question_status,,1,1,1,1
+access_product_channel,access_status_channel_name,model_question_channel,,1,1,1,1
+access_short_name,access_short_name,model_shortcut_page,,1,1,1,1
+access_source_name,access_source_name,model_fatwa_source,,1,1,1,1
+access_landing_name,access_landing_name,model_landing_page,,1,1,1,1
